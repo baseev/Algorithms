@@ -37,4 +37,33 @@ public class Node
     {
         this.data = data;
     }
+    
+    public static Node reverse(Node head) {
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while(current != null) {
+            System.out.println("current : "+current);
+            next = current.next;
+            System.out.println("next : "+next);
+            current.next = prev;
+            System.out.println("current : "+current);
+            prev = current;
+            System.out.println("prev : "+prev);
+            current = next;      
+            System.out.println("current : "+current);
+            System.out.println("\n");
+            System.out.println("\n");
+            System.out.println("\n");
+            System.out.println("\n");
+        }
+        return prev;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Node [next=" + next + ", data=" + data + "]";
+    }
+    
 }
